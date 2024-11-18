@@ -100,7 +100,7 @@ class Question(models.Model):
     grade = models.IntegerField(default = 50)
 
     def __str__(self):
-        return "Question: " + self.content
+        return "Question: " + self.text
     
     def is_get_score(self, selected_ids):
         all_answers = self.choice_set.filter(is_correct=True).count()
